@@ -11,6 +11,8 @@
 		B61B88422A021F6B00C3AC67 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61B88412A021F6B00C3AC67 /* ContentView.swift */; };
 		B61B88442A021F6B00C3AC67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B61B88432A021F6B00C3AC67 /* Assets.xcassets */; };
 		B61B88472A021F6B00C3AC67 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B61B88462A021F6B00C3AC67 /* Preview Assets.xcassets */; };
+		B68C41422A02286000CFDD90 /* turtlerock@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B68C41412A02286000CFDD90 /* turtlerock@2x.jpg */; };
+		B68C41442A0228D600CFDD90 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68C41432A0228D600CFDD90 /* CircleImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		B61B88412A021F6B00C3AC67 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B61B88432A021F6B00C3AC67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B61B88462A021F6B00C3AC67 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B68C41412A02286000CFDD90 /* turtlerock@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "turtlerock@2x.jpg"; sourceTree = "<group>"; };
+		B68C41432A0228D600CFDD90 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +55,12 @@
 		B61B883E2A021F6B00C3AC67 /* CreatingAndCombiningViews */ = {
 			isa = PBXGroup;
 			children = (
+				B68C41412A02286000CFDD90 /* turtlerock@2x.jpg */,
 				B61B883F2A021F6B00C3AC67 /* CreatingAndCombiningViewsApp.swift */,
 				B61B88412A021F6B00C3AC67 /* ContentView.swift */,
 				B61B88432A021F6B00C3AC67 /* Assets.xcassets */,
 				B61B88452A021F6B00C3AC67 /* Preview Content */,
+				B68C41432A0228D600CFDD90 /* CircleImage.swift */,
 			);
 			path = CreatingAndCombiningViews;
 			sourceTree = "<group>";
@@ -125,6 +131,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B68C41422A02286000CFDD90 /* turtlerock@2x.jpg in Resources */,
 				B61B88472A021F6B00C3AC67 /* Preview Assets.xcassets in Resources */,
 				B61B88442A021F6B00C3AC67 /* Assets.xcassets in Resources */,
 			);
@@ -139,6 +146,7 @@
 			files = (
 				B61B88422A021F6B00C3AC67 /* ContentView.swift in Sources */,
 				B61B88402A021F6B00C3AC67 /* CreatingAndCombiningViewsApp.swift in Sources */,
+				B68C41442A0228D600CFDD90 /* CircleImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

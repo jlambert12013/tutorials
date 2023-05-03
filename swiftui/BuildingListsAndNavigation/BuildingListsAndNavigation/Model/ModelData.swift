@@ -11,8 +11,6 @@ import Foundation
 // MODEL
 var landmarks: [Landmark] = load("landmarkData.json")
 
-
-
 // METHOD FOR PARSING JSON FROM A FILE
 func load<T: Decodable> (_ filename: String) -> T {
     

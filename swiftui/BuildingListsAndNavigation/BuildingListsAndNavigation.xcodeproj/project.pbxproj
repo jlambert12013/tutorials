@@ -17,7 +17,7 @@
 		B66D58412A0220F700828553 /* BuildingListsAndNavigationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66D58402A0220F700828553 /* BuildingListsAndNavigationApp.swift */; };
 		B66D58452A0220F800828553 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B66D58442A0220F800828553 /* Assets.xcassets */; };
 		B66D58482A0220F800828553 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B66D58472A0220F800828553 /* Preview Assets.xcassets */; };
-		B6C2695A2A02372500B1856E /* LandmarkRows.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C269592A02372500B1856E /* LandmarkRows.swift */; };
+		B6C2695A2A02372500B1856E /* LandmarkRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C269592A02372500B1856E /* LandmarkRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +32,7 @@
 		B66D58402A0220F700828553 /* BuildingListsAndNavigationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingListsAndNavigationApp.swift; sourceTree = "<group>"; };
 		B66D58442A0220F800828553 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B66D58472A0220F800828553 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		B6C269592A02372500B1856E /* LandmarkRows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkRows.swift; sourceTree = "<group>"; };
+		B6C269592A02372500B1856E /* LandmarkRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +52,7 @@
 				B639C5FE2A02345100F72B5F /* MapView.swift */,
 				B639C5FF2A02345100F72B5F /* CircleImage.swift */,
 				B639C5FD2A02345100F72B5F /* ContentView.swift */,
-				B6C269592A02372500B1856E /* LandmarkRows.swift */,
+				B6C269592A02372500B1856E /* LandmarkRow.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -188,7 +188,7 @@
 				B639C6002A02345100F72B5F /* ContentView.swift in Sources */,
 				B639C6022A02345100F72B5F /* CircleImage.swift in Sources */,
 				B639C5FC2A0231C800F72B5F /* ModelData.swift in Sources */,
-				B6C2695A2A02372500B1856E /* LandmarkRows.swift in Sources */,
+				B6C2695A2A02372500B1856E /* LandmarkRow.swift in Sources */,
 				B66D58412A0220F700828553 /* BuildingListsAndNavigationApp.swift in Sources */,
 				B639C5F82A02305200F72B5F /* Landmark.swift in Sources */,
 			);

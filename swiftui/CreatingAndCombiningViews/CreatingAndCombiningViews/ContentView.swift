@@ -13,6 +13,7 @@ struct ContentView: View {
             
             MapView()
                 .frame(height: 300)
+                .ignoresSafeArea()
             
             CircleImage()
                 .offset(y: -130)
@@ -31,6 +32,8 @@ struct ContentView: View {
                 }
             }
             .padding()
+            
+            Spacer()
         }
     }
 }

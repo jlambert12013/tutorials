@@ -3,9 +3,8 @@
 //  ViewModelBootcamp
 //
 //  Created by Jim Lambert on 7/2/23.
-//
 //  Swiftful Thinking Tutorial on @ObservableObjects
-
+//  https://www.youtube.com/watch?v=-yjKAb0Pj60&t=82s
 import SwiftUI
 
 struct FruitModel: Identifiable {
@@ -16,10 +15,10 @@ struct FruitModel: Identifiable {
 
 
 class FruitViewModel: ObservableObject {
-    /*  "@Published is the same as @State, except it is in a Class" **/
-    @Published var fruitArray: [FruitModel] = []
-    
-    
+
+    //  RIGHT WAY - Seperating out the logic in a class that conforms to Observable Object
+    @Published var fruitArray: [FruitModel] = []    // "@Published is the same as @State, except it is in a Class"
+
     func getFruits() {
         let fruit1 = FruitModel(name: "Orange", count: 7)
         let fruit2 = FruitModel(name: "Banana", count: 4)
@@ -27,7 +26,7 @@ class FruitViewModel: ObservableObject {
         let fruit4 = FruitModel(name: "Tomato", count: 9)
         let fruit5 = FruitModel(name: "Strawberry", count: 1)
         let fruit6 = FruitModel(name: "Orange", count: 7)
-        
+
         fruitArray.append(fruit1)
         fruitArray.append(fruit2)
         fruitArray.append(fruit3)
@@ -35,7 +34,7 @@ class FruitViewModel: ObservableObject {
         fruitArray.append(fruit5)
         fruitArray.append(fruit6)
     }
-    
+
     func deleteFruit(index: IndexSet) {
         fruitArray.remove(atOffsets: index)
     }
@@ -43,12 +42,11 @@ class FruitViewModel: ObservableObject {
 
 
 struct ContentView: View {
-    
-    //  Before Refactored way using @Published
+
+    //  WRONG WAY - Before Refactored way using @Published
     //    @State var fruitArray: [FruitModel] = [FruitModel(name: "Apples", count: 5)]
-    
-    /* NEW WAY using @Publsihed property wrapper **/
-    /* @ObservedObject tell view to listen for changes on @Published Properties **/
+
+    //  RIGHT WAY - Using @Publsihed property wrapper. @ObservedObject tell view to listen for changes on @Published Properties.
     @ObservedObject var fruitViewModel: FruitViewModel = FruitViewModel()
     
     var body: some View {
@@ -71,10 +69,10 @@ struct ContentView: View {
                 }
             }
         }
-        
-        
-        
-        // You want to seperate logic from views. You do this be creating a View Model to handle the logic.
+
+
+
+        //  WRONG WAY - You want to seperate logic from views. You do this be creating a View Model to handle the logic.
         //        func getFruits() {
         //            let fruit1 = FruitModel(name: "Orange", count: 7)
         //            let fruit2 = FruitModel(name: "Banana", count: 4)
@@ -95,7 +93,7 @@ struct ContentView: View {
         //            fruitArray.remove(atOffsets: index)
         //        }
     }
-    
+
 }
 
 

@@ -15,7 +15,6 @@ struct FruitModel: Identifiable {
 
 
 class FruitViewModel: ObservableObject {
-    
     //  Seperating out the logic in a class that conforms to Observable Object.
     //  "@Published is the same as @State, except it is in a Class."
     @Published var fruitArray: [FruitModel] = []
@@ -75,19 +74,25 @@ struct ContentView: View {
         VStack {
             NavigationView {
                 List {
-                    ForEach(fruitViewModel.fruitArray) { fruit in
-                        HStack {
-                            Text("\(fruit.count)").foregroundColor(.red)
-                            Text(fruit.name)
-                                .font(.headline)
-                                .bold()
-                        }
-                    }.onDelete(perform: fruitViewModel.deleteFruit)
+
+                    if fruitViewModel.isLoading {
+                        ProgressView()
+                    } else {
+                        ForEach(fruitViewModel.fruitArray) { fruit in
+                            HStack {
+                                Text("\(fruit.count)").foregroundColor(.red)
+                                Text(fruit.name)
+                                    .font(.headline)
+                                    .bold()
+                            }
+                        }.onDelete(perform: fruitViewModel.deleteFruit)
+                    }
+
                 }
                 .listStyle(GroupedListStyle())
                 .navigationTitle("Fruit List")
                 .navigationBarItems(trailing: NavigationLink(destination: {
-                    SecondScreenView()
+                    SecondScreenView(fruitViewModel: FruitViewModel())
                 }, label: {
                     Image(systemName: "arrow.right")
                         .font(.title)
@@ -159,3 +164,22 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+
+
+
+
+
+/**  Jim's Notes after tutorial
+ *
+ *
+ *
+ Key takeaways from this tutorial:
+ 1. View shouldn't contain the logic.
+ 2. View Models are used to handle all the logic (methods and properties).
+ 3. Since we can't use the @State Property Wrapper after moving our methods into the ViewModel, we have to use another property wrapper provided by SwiftUI.
+ 4. We use the @Published Property wrapper in the ViewModel so views containing the ViewModel can watch for changes (so the view can update accordingly).
+ 5. When using @PUblished, we also need to use @StateObject to notify the ViewModel Object in our views. This @StateObject is used to presist the View Models data in our app.
+ 6. The @ObservedObject should only be used when passing data from an already created @Published object.
+ NOTE: Be careful when using "On Appear" since the data could be recreated over and over again if not used properly. Much easier to create a custom initializer in the View Model. **/
+
